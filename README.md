@@ -12,7 +12,7 @@ STEPS TO PERFORM:
 
 4. Retrieve back few records from DB
 
-5. Create a xls file and save
+5. Create a file and save
 
 
 Try below for combining both csv files
@@ -60,5 +60,10 @@ LUNG_CANCER varchar(255)
 mysql> select * from LungCancer;
 ```
 
-
+For storing filtered data to DB
 Run `data_storage.py` file
+
+
+For retriving data 
+
+`sql2csv --db 'mysql+mysqlconnector://suuser:easypass@localhost/CancerDB?charset=utf8' --query "select * from LungCancer where Gender='M'" | csvlook > final_result`
