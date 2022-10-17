@@ -13,3 +13,8 @@ STEPS TO PERFORM:
 4. Retrieve back few records from DB
 
 5. Create a xls file and save
+
+
+Try below for combining both csv files
+
+`csvjoin -c "ID,ID" --left survey-lung-cancer-gen.csv survey-lung-cancer-other.csv > survey-lung-cancer.csv`
