@@ -25,3 +25,38 @@ Do filtering with awk and convert txt to csv like below
 `awk -F, '{ if($3>70) print $1,$2,$3,$17; }' survey-lung-cancer.csv > survey-lung-cancer-filtered.txt`
 
 `sed 's/ \+/,/g' survey-lung-cancer-filtered.txt > survey-lung-cancer-filtered.csv`
+
+
+Make db and table in MySql
+
+```
+$ sudo service mysql start
+$ sudo service mysql start
+$ sudo mysql
+
+mysql> create user 'suuser'@'localhost' identified by 'easypass';
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'suuser'@'localhost' WITH GRANT OPTION;
+Query OK, 0 rows affected (0.29 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> SHOW GRANTS FOR 'demo1'@'localhost';
+
+mysql> CREATE DATABASE CancerDB;
+Query OK, 1 row affected (0.22 sec)
+
+mysql> USE CancerDB
+Database changed
+
+mysql> CREATE TABLE LungCancer(
+ID int,
+Gender varchar(255),
+Age int,
+LUNG_CANCER varchar(255)
+);
+
+mysql> select * from LungCancer;
+```
+
