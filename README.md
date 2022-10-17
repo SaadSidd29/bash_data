@@ -5,7 +5,11 @@ A health institute maintains the records of patient in following way. It collect
 STEPS TO PERFORM: 
 
 Collect raw data from 2 data-sources (local) and git
+
 Do analysis on that combined data. Filtering and Sorting
+
 Send to database
+
 Retrieve back few records from DB
+
 Create a xls file and save
