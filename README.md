@@ -60,3 +60,5 @@ LUNG_CANCER varchar(255)
 mysql> select * from LungCancer;
 ```
 
+
+Run `data_storage.py` file
