@@ -18,3 +18,10 @@ STEPS TO PERFORM:
 Try below for combining both csv files
 
 `csvjoin -c "ID,ID" --left survey-lung-cancer-gen.csv survey-lung-cancer-other.csv > survey-lung-cancer.csv`
+
+
+Do filtering with awk and convert txt to csv like below
+
+`awk -F, '{ if($3>70) print $1,$2,$3,$17; }' survey-lung-cancer.csv > survey-lung-cancer-filtered.txt`
+
+`sed 's/ \+/,/g' survey-lung-cancer-filtered.txt > survey-lung-cancer-filtered.csv`
